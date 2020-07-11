@@ -2,6 +2,15 @@ const { Order } = require('../models/Order');
 const { Cart } = require('../models/Cart');
 
 module.exports = {
+    getOrders: async (req, res) => {
+        const {
+            customerId
+        } = req.params;
+
+        const order = await Order.find({ customer: customerId });
+
+        return res.status(200).json(order);
+    },
     createOrder: async (req, res) => {
         errors = {};
         const {
