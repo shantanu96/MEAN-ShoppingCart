@@ -12,6 +12,7 @@ var indexRouter = require('./routes/index');
 var userApiRouter = require('./routes/api/users');
 var productApiRouter = require('./routes/api/products');
 var cartApiRouter = require('./routes/api/cart');
+var orderApiRouter = require('./routes/api/order');
 
 var productAdminRouter = require('./routes/adminapi/product');
 var categoryAdminRouter = require('./routes/adminapi/category');
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/api/user', userApiRouter);
 app.use('/api/product', productApiRouter);
 app.use('/api/cart', cartApiRouter);
+app.use('/api/order', orderApiRouter);
 
 app.use('/admin/product', productAdminRouter);
 app.use('/admin/category', categoryAdminRouter);
