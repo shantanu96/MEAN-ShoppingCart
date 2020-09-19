@@ -1,0 +1,19 @@
+<mat-toolbar class="navbar" color="primary">
+  <span>BailBazzar</span>
+  <a mat-button>Electronics</a>
+  <a mat-button>Furniture</a>
+  <a mat-button>Sports</a>
+  <span class="spacer"></span>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+    <mat-form-field floatLabel="never">
+      <input type="text" matInput name="search" placeholder="Search">
+      <button mat-button matSuffix mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <a mat-raised-button color="accent">Sign In</a>
+    <a mat-button mat-icon-button><mat-icon>shopping_cart</mat-icon></a>
+  </div>
+
+</mat-toolbar>

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProductService } from '../core/services/product.service';
 import { Product } from '../core/models/product.model';
 import { Category } from '../core/models/category.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-products',
@@ -15,7 +16,10 @@ export class AddProductsComponent implements OnInit {
 
   categories: Category[];
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private productService: ProductService,
+    private router: Router
+    ) {
 
   }
 
@@ -31,6 +35,7 @@ export class AddProductsComponent implements OnInit {
     console.log(this.product);
     this.productService.addProduct(this.product).subscribe(response => {
       console.log('Success', response);
+      this.router.navigate(['/admin/product']);
     }, error => {
       console.error('Error!', error);
     });

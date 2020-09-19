@@ -17,12 +17,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+import { MatTableModule } from '@angular/material/table';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { StorefrontComponent } from './storefront/storefront.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductsComponent,
     AdminPanelComponent,
+    ProductComponent,
+    StorefrontComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatListModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
