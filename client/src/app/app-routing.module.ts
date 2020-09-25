@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductComponent } from './product/product.component';
 import { StorefrontComponent } from './storefront/storefront.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
       path: 'product', component: ProductComponent
     }]
   },
+  { path: 'storefront/product_details', component: ProductDetailsComponent },
   { path: 'storefront', component: StorefrontComponent },
   { path: '', redirectTo: '/storefront', pathMatch: 'full' }
 ];

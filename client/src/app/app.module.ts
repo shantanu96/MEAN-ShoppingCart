@@ -21,6 +21,8 @@ import { ProductComponent } from './product/product.component';
 import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { StorefrontComponent } from './storefront/storefront.component';
+import { MatCardModule } from '@angular/material/card';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { StorefrontComponent } from './storefront/storefront.component';
     AdminPanelComponent,
     ProductComponent,
     StorefrontComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { StorefrontComponent } from './storefront/storefront.component';
     HttpClientModule,
     MatTableModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
