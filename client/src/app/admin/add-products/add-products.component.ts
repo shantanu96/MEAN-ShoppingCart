@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductService } from '../core/services/product.service';
-import { Product } from '../core/models/product.model';
-import { Category } from '../core/models/category.model';
+import { ProductService } from '../../core/services/product.service';
+import { Product } from '../../core/models/product.model';
+import { Category } from '../../core/models/category.model';
 import { Router } from '@angular/router';
 
 @Component({
