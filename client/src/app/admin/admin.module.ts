@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -29,18 +30,13 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     AdminRoutingModule,
     MatTableModule,
-    MatIconModule,
-    MatInputModule,
     FormsModule,
     MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
     MatListModule,
-    MatButtonModule,
     MatSelectModule,
     HttpClientModule,
-    FlexLayoutModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ]
 })
 export class AdminModule { }
