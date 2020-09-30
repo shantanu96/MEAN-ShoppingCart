@@ -1,0 +1,21 @@
+<mat-card>
+  <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
+    <div fxFlex="15" fxLayout="column">
+      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-form-field class="quantity-input">
+        <input matInput min="1" value="1" type="number" placeholder="Quantity">
+      </mat-form-field>
+    </div>
+    <div fxFlex="30" fxLayout="column">
+      <div class="product-name">Product Name</div>
+      <div class="product-price">₹1000</div>
+      <button mat-mini-fab color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <div fxFlex="15" fxLaout="column" class="single-product-total-price">
+      ₹1000
+    </div>
+
+  </div>
+</mat-card>

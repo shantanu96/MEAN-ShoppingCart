@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { StorefrontComponent } from './storefront/storefront.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartModule } from './cart/cart.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

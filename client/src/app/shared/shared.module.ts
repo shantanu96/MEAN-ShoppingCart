@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProductCardComponent } from './widgets/product-card/product-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -28,7 +29,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     FlexLayoutModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
   ],
   exports: [
     HeaderComponent,
@@ -40,7 +42,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     FlexLayoutModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
   ]
 })
 export class SharedModule { }

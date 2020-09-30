@@ -1,0 +1,35 @@
+<div class="container">
+  <h3 class="items-label">Items (count)</h3>
+
+  <ul>
+    <li>
+      <app-cart-item-card></app-cart-item-card>
+    </li>
+    <li>
+      <app-cart-item-card></app-cart-item-card>
+    </li>
+  </ul>
+
+
+  <br><br>
+  <mat-divider></mat-divider>
+  <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
+    <div fxFlex="15">
+      <h2 class="dimgray">Shipping:</h2>
+    </div>
+    <div fxFlex="15">
+      <h2 class="dimgray">₹0</h2>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+  <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
+    <div fxFlex="15">
+      <h2 class="dimgray">Total:</h2>
+    </div>
+    <div fxFlex="15">
+      <h2 class="dimgray">₹1000</h2>
+    </div>
+  </div>
+  <a mat-raised-button color="primary" class="place-order-btn">PLACE ORDER</a>
+</div>

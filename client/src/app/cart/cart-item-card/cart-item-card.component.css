@@ -1,0 +1,28 @@
+img {
+  width: 100px;
+}
+
+.quantity-input {
+  max-width: 100px;
+  margin-top: 5px;
+}
+
+.product-name {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.product-price {
+  font-size: 15px;
+  color: darkslategray;
+  margin-bottom: 15px;
+}
+
+.single-product-total-price {
+  font-size: 15px;
+  color: darkslategray;
+}
+
+.remove-item-button {
+  width: 60px;
+}
