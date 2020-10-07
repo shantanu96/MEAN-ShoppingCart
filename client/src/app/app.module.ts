@@ -6,16 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { StorefrontComponent } from './storefront/storefront.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartModule } from './cart/cart.module';
+import { StorefrontModule } from './storefront/storefront.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StorefrontComponent,
-    ProductDetailsComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +20,8 @@ import { CartModule } from './cart/cart.module';
     BrowserAnimationsModule,
     HttpClientModule,
     SharedModule,
-    CartModule
+    CartModule,
+    StorefrontModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,5 @@
-<div>
-  <app-product-card></app-product-card>
-</div>
+<mat-grid-list cols="4">
+  <mat-grid-tile *ngFor="let product of products" [colspan]=1 [rowspan]=1>
+      <app-product-card [product]="product" (click)="onProudctCardClick(product.id)"></app-product-card>
+  </mat-grid-tile>
+</mat-grid-list>
