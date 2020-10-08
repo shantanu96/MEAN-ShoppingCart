@@ -6,8 +6,8 @@
 
     <div fxFlex="50" fxLayout="column" fxLayoutGap="40px" class="details">
       <div fxLayout="column" fxLayoutGap="20px">
-        <h1 class="product-title">Product Name</h1>
-        <h3 class="product-price">₹100</h3>
+        <h1 class="product-title">{{product.name}}</h1>
+        <h3 class="product-price">₹ {{product.price}}</h3>
         <div>
           <input fxInput type="number" min="0" value="1" class="quantity-input">
           <a mat-raised-button color="primary">Add to Cart</a>
@@ -17,15 +17,7 @@
       <div fxLayout="column" fxLayoutGap="10px">
         <h3 class="product-details-title">Product Details</h3>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make
-          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing
-          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-          versions
-          of Lorem Ipsum.
+          {{product.description}}
         </p>
       </div>
     </div>

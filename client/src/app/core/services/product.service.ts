@@ -11,7 +11,7 @@ import { catchError, map } from 'rxjs/operators';
 export class ProductService {
 
   addProductUrl = 'http://localhost:3000/admin/product/add';
-  getProductsUrl = 'http://localhost:3000/admin/product';
+  getProductsUrl = 'http://localhost:3000/api/product/';
   getCategoriesUrl = 'http://localhost:3000/admin/category/';
 
   constructor(
@@ -36,6 +36,15 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.getProductsUrl).pipe(
       map((data: Product[]) => data.map(item => this.productAdapter.adapt(item))),
+      catchError(error => {
+        return throwError('Something went wrong');
+      })
+    );
+  }
+
+  getProductById(id: string): Observable<Product> {
+    return this.http.get<Product>(this.getProductsUrl + id).pipe(
+      map((data: Product) => this.productAdapter.adapt(data)),
       catchError(error => {
         return throwError('Something went wrong');
       })
