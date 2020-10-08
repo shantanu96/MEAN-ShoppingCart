@@ -45,7 +45,7 @@ module.exports = {
 
     getProuductById: async (req, res) => {
         const { id } = req.params;
-        const products = await Product.find({ _id: id });
+        const products = await Product.findById(id);
         return res.status(200).json(products);
     },
 
