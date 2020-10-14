@@ -53,5 +53,9 @@ module.exports = {
         const { categoryId } = req.params;
         const products = await Product.find({ category: categoryId });
         return res.status(200).json(products);
+    },
+
+    uploadBulkPorudctsFromFile: async (req, res) => {
+        res.send();
     }
 }
