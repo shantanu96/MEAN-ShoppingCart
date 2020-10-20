@@ -61,7 +61,7 @@ module.exports = {
         let filename = req.file.fieldname + '-' + Date.now() + path.extname(req.file.originalname);
         xlsxFile('./uploads/' + req.file.filename).then(async (rows) => {
             let products = [];
-            for (let i = 1; i < 3; i++) {
+            for (let i = 1; i < rows.length; i++) {
 
                 temp = {
                     name: rows[i][2],
