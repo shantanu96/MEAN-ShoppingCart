@@ -13,11 +13,8 @@ var userApiRouter = require('./routes/api/users');
 var productApiRouter = require('./routes/api/products');
 var cartApiRouter = require('./routes/api/cart');
 var orderApiRouter = require('./routes/api/order');
+var categoryRoute = require('./routes/api/category');
 
-var productAdminRouter = require('./routes/adminapi/product');
-var categoryAdminRouter = require('./routes/adminapi/category');
-
-var adminpanel = require('./routes/adminpanel');
 
 var app = express();
 
@@ -32,16 +29,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
+
+//routes
 app.use('/', indexRouter);
+app.use('/adminpanel', indexRouter);
+
 app.use('/api/user', userApiRouter);
 app.use('/api/product', productApiRouter);
 app.use('/api/cart', cartApiRouter);
 app.use('/api/order', orderApiRouter);
+app.use('/api/category', categoryRoute)
 
-app.use('/admin/product', productAdminRouter);
-app.use('/admin/category', categoryAdminRouter);
 
-app.use('/adminpanel', adminpanel);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

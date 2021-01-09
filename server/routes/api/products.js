@@ -1,14 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const {
-    getProuducts, getProuductById, getProuductByCategory, uploadBulkPorudctsFromFile
+    getProuducts, getProuductById, getProuductByCategory, uploadBulkPorudctsFromFile, addProduct
+    , deleteProduct
 } = require('../../controllers/ProductController');
 const multer = require('multer');
 const path = require('path');
 
+// routes
 router.get('/', getProuducts);
 router.get('/:id', getProuductById);
 router.get('/category/:categoryId', getProuductByCategory);
+router.post('/add', addProduct);
+router.get('/delete/:id', deleteProduct);
 
 // bulk product upload from file
 const storage = multer.diskStorage({

@@ -15,3 +15,9 @@
   font-size: medium;
   color: #555;
 }
+
+.product-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
