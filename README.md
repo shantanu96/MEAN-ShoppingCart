@@ -1,1 +1,1 @@
-# MEAN-ShoppingCart
+# Ecommerce-MEAN
