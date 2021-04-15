@@ -9,8 +9,8 @@
         <h1 class="product-title">{{product.name}}</h1>
         <h3 class="product-price">₹ {{product.price}}</h3>
         <div>
-          <input fxInput type="number" min="0" value="1" class="quantity-input">
-          <a mat-raised-button color="primary">Add to Cart</a>
+          <input #qty fxInput type="number" min="0" value="1" class="quantity-input" (click)="onQtyChange(qty.value)">
+          <a mat-raised-button color="primary" (click)="addToCart()">Add to Cart</a>
         </div>
       </div>
 

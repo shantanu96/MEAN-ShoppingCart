@@ -21,7 +21,7 @@ import { StorefrontModule } from './storefront/storefront.module';
     HttpClientModule,
     SharedModule,
     CartModule,
-    StorefrontModule
+    StorefrontModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

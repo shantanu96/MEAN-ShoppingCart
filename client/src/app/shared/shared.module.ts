@@ -12,7 +12,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProductCardComponent } from './widgets/product-card/product-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -33,6 +35,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatCardModule,
     MatDividerModule,
     MatTooltipModule,
+    MatSnackBarModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
@@ -47,6 +51,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatCardModule,
     MatDividerModule,
     MatTooltipModule,
+    MatSnackBarModule,
+    RouterModule,
   ]
 })
 export class SharedModule { }

@@ -50,4 +50,16 @@ export class ProductService {
       })
     );
   }
+
+  addProductToCart(customerId: string, productId: string, qty: number, price: number) {
+    return this.http.post('/api/cart/add/' + customerId, { productId, qty, price });
+  }
+
+  getProductsInCart(customerId: string) {
+    return this.http.get('/api/cart/' + customerId);
+  }
+
+  removeItemFromCart(customerId: string, productId) {
+    return this.http.get('/api/cart/delete/' + customerId + '/' + productId);
+  }
 }

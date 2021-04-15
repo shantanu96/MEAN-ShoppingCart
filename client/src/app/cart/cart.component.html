@@ -1,20 +1,26 @@
 <div class="container">
   <h3 class="items-label">Items (count)</h3>
-
   <ul>
-    <li>
-      <app-cart-item-card></app-cart-item-card>
-    </li>
-    <li>
-      <app-cart-item-card></app-cart-item-card>
+    <li *ngFor="let item of cart.items">
+      <app-cart-item-card [product]='item.product' [name]="item.product.name" [price]="item.price" [qty]="item.qty">
+      </app-cart-item-card>
     </li>
   </ul>
 
-
   <br><br>
   <mat-divider></mat-divider>
+
   <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
+    <div fxFlex="30">
+      <h2 class="dimgray">Price ({{totalQty}} items):</h2>
+    </div>
     <div fxFlex="15">
+      <h2 class="dimgray">$ {{totalPrice}}</h2>
+    </div>
+  </div>
+
+  <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
+    <div fxFlex="30">
       <h2 class="dimgray">Shipping:</h2>
     </div>
     <div fxFlex="15">
@@ -24,7 +30,7 @@
 
   <mat-divider></mat-divider>
   <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutGap.xs="0">
-    <div fxFlex="15">
+    <div fxFlex="30">
       <h2 class="dimgray">Total:</h2>
     </div>
     <div fxFlex="15">

@@ -7,7 +7,7 @@ module.exports = {
         const errors = {}
         const { customerId } = req.params;
 
-        const cart = await Cart.find({ onwner: customerId });
+        const cart = await Cart.findOne({ owner: customerId }).populate('items.product');
         res.status(200).json(cart);
     },
 
